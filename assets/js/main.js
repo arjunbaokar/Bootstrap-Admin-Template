@@ -484,10 +484,13 @@ function formGeneral() {
     /*----------- END colorpicker CODE -------------------------*/
 
     /*----------- BEGIN datepicker CODE -------------------------*/
-    $('#dp1').datepicker({
-        format: 'mm-dd-yyyy'
-    });
+    var date = new Date();
+    $('#dp1').attr("data-date", date.toLocaleDateString());
+    $('#dp1').datepicker();
+    $('#dp1').val(date.toLocaleDateString());
+    $('#dp2').attr("data-date", date.toLocaleDateString());
     $('#dp2').datepicker();
+    $('#dp2').val(date.toLocaleDateString());
     $('#dp3').datepicker();
     $('#dp3').datepicker();
     $('#dpYears').datepicker();
@@ -540,7 +543,10 @@ function formGeneral() {
     /*----------- END daterangepicker CODE -------------------------*/
 
     /*----------- BEGIN timepicker CODE -------------------------*/
-    $('.timepicker-default').timepicker();
+ 
+    $('.timepicker-default').timepicker({defaultTime: date.toLocaleTimeString(), showSeconds: true});
+    $('#starttime').val(date.toLocaleTimeString());
+    $('#endtime').val(date.toLocaleTimeString());
 
     $('.timepicker-24').timepicker({
         minuteStep: 1,
