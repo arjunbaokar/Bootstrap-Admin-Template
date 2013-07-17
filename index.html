@@ -180,19 +180,19 @@
                                 <ul class="stats_box">
                                     <li>
                                         <div class="sparkline bar_week"></div>
-                                        <div class="stat_text"> Unavailable Nodes
+                                        <div id="nodesDown" class="stat_text"> Unavailable Nodes
                                             <span class="percent down">19</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="sparkline line_day"></div>
-                                        <div class="stat_text"> Available Nodes
+                                        <div id="availNodes" class="stat_text"> Available Nodes
                                             <span class="percent up">23</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="sparkline pie_week"></div>
-                                        <div class="stat_text">Total Nodes
+                                        <div id="totalNodes" class="stat_text">Total Nodes
                                             <span class="percent">42</span>
                                         </div>
                                     </li>
@@ -205,7 +205,7 @@
                                         <header>
                                             <h5>Node View</h5>
                                         </header>
-                                        <div class="body" id="trigo" style="height: 500px;"></div>
+                                        <div class="body" id="nodeHeatMap" style="height: 500px;"></div>
                                     </div>
                                 </div>
                                 <div class="span4">
@@ -214,7 +214,7 @@
                                             <div class="icons"><i class="icon-tags"></i></div>
                                             <h5>Pool Availability</h5>
                                         </header>
-                                        <div class="body">
+                                        <div id="availabilityKnob" class="body">
                                             <table class="table table-bordered table-condensed table-hovered sortableTable">
                                                 <thead>
                                                     <tr>
@@ -274,7 +274,7 @@
                                             <div class="icons"><i class="icon-tags"></i></div>
                                             <h5>Availability Graph</h5>
                                         </header>
-                                        <div class="block">
+                                        <div id="availabilityGraph" class="block">
                                             <table class="table table-striped">
                                                 <tbody>
                                                     <tr>
